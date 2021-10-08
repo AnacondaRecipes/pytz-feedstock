@@ -25,6 +25,11 @@ requirements:
 test:
   imports:
     - pytz
+  requires:
+    - python <3.10
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://pythonhosted.org/pytz/
