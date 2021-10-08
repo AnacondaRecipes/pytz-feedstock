@@ -17,6 +17,7 @@ requirements:
   host:
     - python
     - setuptools
+    - wheel
     - pip
   run:
     - python
@@ -24,6 +25,10 @@ requirements:
 test:
   imports:
     - pytz
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: http://pythonhosted.org/pytz/
@@ -36,8 +41,8 @@ about:
     higher. It also solves the issue of ambiguous times at the end of daylight
     saving time.
   doc_url: http://pythonhosted.org/pytz/
-  dev_url: https://github.com/newvem/pytz
-  doc_source_url: https://github.com/newvem/pytz/blob/master/README.txt
+  dev_url: https://github.com/stub42/pytz
+  doc_source_url: https://github.com/stub42/pytz#readme
 
 extra:
   recipe-maintainers:
