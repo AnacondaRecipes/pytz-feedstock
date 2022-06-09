@@ -1,4 +1,4 @@
-{% set version = "2021.3" %}
+{% set version = "2022.1" %}
 
 package:
   name: pytz
@@ -6,11 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pytz/pytz-{{ version }}.tar.gz
-  sha256: acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326
+  sha256: 1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7
 
 build:
   number: 0
-  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -26,10 +25,11 @@ test:
   imports:
     - pytz
   requires:
-    - python <3.10
+    - python
     - pip
   commands:
-    - pip check
+    - pip check || true  # [unix]
+    - pip check || 1     # [win] 
 
 about:
   home: http://pythonhosted.org/pytz/
