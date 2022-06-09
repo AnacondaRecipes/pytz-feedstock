@@ -41,7 +41,7 @@ about:
     accurate and cross platform timezone calculations using Python 2.4 or
     higher. It also solves the issue of ambiguous times at the end of daylight
     saving time.
-  doc_url: http://pythonhosted.org/pytz/
+  doc_url: https://pythonhosted.org/pytz/
   dev_url: https://github.com/stub42/pytz
   doc_source_url: https://github.com/stub42/pytz#readme
 
