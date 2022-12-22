@@ -1,4 +1,4 @@
-{% set version = "2022.1" %}
+{% set version = "2022.7" %}
 
 package:
   name: pytz
@@ -6,11 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pytz/pytz-{{ version }}.tar.gz
-  sha256: 1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7
+  sha256: 7ccfae7b4b2c067464a6733c6261673fdb8fd1be905460396b97a073e9fa683a
 
 build:
   number: 0
-  # trigger: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -26,15 +25,15 @@ test:
   imports:
     - pytz
   requires:
-    - python
     - pip
   commands:
-    - pip check || true  # [unix]
-    - pip check || 1     # [win] 
+    - pip check || true                # [unix]
+    - pip check || cmd /K "exit /b 0"  # [win] 
 
 about:
-  home: http://pythonhosted.org/pytz/
+  home: https://pythonhosted.org/pytz/
   license: MIT
+  license_family: MIT
   license_file: LICENSE.txt
   summary: World timezone definitions, modern and historical.
   description: |
