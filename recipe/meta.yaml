@@ -34,6 +34,7 @@ about:
   home: https://pythonhosted.org/pytz/
   license: MIT
   license_file: LICENSE.txt
+  license_family: MIT
   summary: World timezone definitions, modern and historical.
   description: |
     pytz brings the Olson tz database into Python. This library allows
