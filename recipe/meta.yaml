@@ -33,6 +33,7 @@ test:
 about:
   home: https://pythonhosted.org/pytz/
   license: MIT
+  license_family: MIT
   license_file: LICENSE.txt
   license_family: MIT
   summary: World timezone definitions, modern and historical.
