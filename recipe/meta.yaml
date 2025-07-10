@@ -23,13 +23,18 @@ requirements:
     - python
 
 test:
+  source_files:
+    - pytz/tests
+    - README.rst  # Required for some documentation tests
   imports:
     - pytz
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - pytest -vv pytz/tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://pythonhosted.org/pytz
