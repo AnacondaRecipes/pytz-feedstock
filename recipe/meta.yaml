@@ -1,5 +1,5 @@
 {% set name = "pytz" %}
-{% set version = "2026.2" %}
+{% set version = "2026.3.post1" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0e60b47b29f21574376f218fe21abc009894a2321ea16c6754f3cad6eb7cdd6a
+  sha256: 2211d3fcf9a797d3405cac96ac7f61d80e6a644f72a3309607282fe8a2010c5d
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv
+
 
 requirements:
   host:
