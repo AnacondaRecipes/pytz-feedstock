@@ -1,5 +1,5 @@
 {% set name = "pytz" %}
-{% set version = "2026.5" %}
+{% set version = "2026.6" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fa23724b9c486543b9ff54a327ee7569ac83ade54bb9afd0fc18676620401c86
+  sha256: 3b0fc2727707663d6e517936f444fd8a8b240f1fc32f4bf7ee03274245945284
 
 build:
   number: 0
